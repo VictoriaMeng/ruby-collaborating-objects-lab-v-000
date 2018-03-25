@@ -18,8 +18,8 @@ class MP3Importer
       file_array = file.split(%r{ - })
       file_arrray[-1].slice!(".mp3")
       file_arrray
-    end 
-  
+    end
+
   end
 end
 
