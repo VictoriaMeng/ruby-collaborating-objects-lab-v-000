@@ -15,6 +15,7 @@ class Song
     song = Song.new(file_array[1])
     artist = Artist.find_or_create_by_name(name)
   end
+end
 
 
 song = Song.new_by_filename("Action Bronson - Larry Csonka - indie")
