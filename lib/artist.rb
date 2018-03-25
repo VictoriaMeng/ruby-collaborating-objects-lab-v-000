@@ -32,7 +32,7 @@ class Artist
     if existing_artist
       existing_artist
     else
-      Artist.new(artist_name)
+      self.new(artist_name)
     end
   end
 end
