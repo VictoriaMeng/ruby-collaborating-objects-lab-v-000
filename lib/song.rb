@@ -15,6 +15,5 @@ class Song
     song = Song.new(file_array[1])
     song.artist = Artist.new(file_array[0])
     song
-    binding.pry
   end
 end
