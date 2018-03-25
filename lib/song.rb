@@ -13,6 +13,7 @@ class Song
     file_array = file.split(%r{ - })
     file_array[-1].slice!(".mp3")
     song = Song.new(file_array[1])
+    artist = Song.artist_name(file_array[0])
   end
 
   def self.artist_name(name)
