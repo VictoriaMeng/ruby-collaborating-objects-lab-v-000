@@ -13,9 +13,9 @@ class Song
     file_array = file.split(%r{ - })
     file_array[-1].slice!(".mp3")
     song = Song.new(file_array[1])
-    artist = Artist.find_or_create_by_name(file_array[0])
-    artist.add_song(song)
-    song
+    # artist = Artist.find_or_create_by_name(file_array[0])
+    # artist.add_song(song)
+    # song
   end
 end
 
