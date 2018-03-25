@@ -21,8 +21,8 @@ class MP3Importer
 
   def import
     files.each do |file|
-      artist = Artist.find_or_create_by_name(file_array[0])
-      artist.add_song(file_array[1])
+      artist = Artist.find_or_create_by_name(file[0])
+      artist.add_song(file[1])
     end
   end
 end
