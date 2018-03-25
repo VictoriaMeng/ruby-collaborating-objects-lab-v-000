@@ -16,9 +16,5 @@ class Song
     artist = Artist.find_or_create_by_name(name)
   end
 
-  def self.artist_name(name)
-    artist =
-  end
-end
 
 song = Song.new_by_filename("Action Bronson - Larry Csonka - indie")
