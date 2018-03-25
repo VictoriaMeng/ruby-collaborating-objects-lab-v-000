@@ -10,9 +10,11 @@ class MP3Importer
   def files
     files = []
     Dir.foreach(path) do |file|
-      files << file.split(%r{ - })
+      file_arrray = file.split(%r{ - })
+      file_arrray[-1].slice!(".mp3")
+      files << file_arrray
     end
-
+    files
   end
 
   def import
