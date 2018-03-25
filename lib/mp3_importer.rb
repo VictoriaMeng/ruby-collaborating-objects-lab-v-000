@@ -10,9 +10,8 @@ class MP3Importer
   def files
     files = []
     Dir.foreach(path) { |file| files << file }
-    binding.pry
-    # file_array = file.split(%r{ - })
-    # file_array[-1].slice!(".mp3")
+    file_array = file.split(%r{ - })
+    file_array[-1].slice!(".mp3")
   end
 
   def import
