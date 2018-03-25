@@ -9,7 +9,7 @@ class MP3Importer
 
   def files
     files = []
-    Dir.foreach(path) { |file| files << file_arrray }
+    Dir.foreach(path) { |file| files << file }
     files
   end
 
