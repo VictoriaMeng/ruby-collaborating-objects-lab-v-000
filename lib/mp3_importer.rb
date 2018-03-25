@@ -9,14 +9,14 @@ class MP3Importer
 
   def files
     files = []
-    Dir.foreach(path) { |file| files << file if file.include?(".mp3") }
+    Dir.foreach(path) do
+      |file| files << file if file.include?(".mp3")
+    end
     files
   end
 
   def import
     files.each do |file|
-      file_array = file.split(%r{ - })
-      file_array[-1].slice!(".mp3")
       artist = Artist.find_or_create_by_name(file_array[0])
       artist.add_song(file_array[1])
     end
