@@ -9,7 +9,7 @@ class MP3Importer
 
   def files
     files = []
-    Dir.foreach(path) { |file| files << file.include?(".mp3") }
+    Dir.foreach(path) { |file| files << file if file.include?(".mp3") }
     files
   end
 
