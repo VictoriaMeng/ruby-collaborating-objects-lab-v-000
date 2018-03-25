@@ -16,10 +16,9 @@ class MP3Importer
   def import
     files.map! do |file|
       file_array = file.split(%r{ - })
-      file_arrray[-1].slice!(".mp3")
-      file_arrray
+      file_array[-1].slice!(".mp3")
+      file_array
     end
-
   end
 end
 
