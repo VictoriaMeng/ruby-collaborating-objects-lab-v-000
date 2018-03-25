@@ -31,7 +31,7 @@ class Artist
     if @@all.none? { |artist| artist.name == name }
       Artist.new(name)
     else
-      @@all.find { |artist| artist.name == name}
+      @@all.find { |artist| artist.name == name }
     end
   end
 end
