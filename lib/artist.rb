@@ -36,3 +36,7 @@ class Artist
     end
   end
 end
+
+adele = Artist.find_or_create_by_name("Adele")
+adele_2 = Artist.find_or_create_by_name("Adele")
+Artist.all
