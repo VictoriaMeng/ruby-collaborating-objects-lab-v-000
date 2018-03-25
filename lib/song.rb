@@ -14,6 +14,7 @@ class Song
     file_array[-1].slice!(".mp3")
     song = Song.new(file_array[1])
     song.artist = Artist.new(file_array[0])
+    song
     binding.pry
   end
 end
