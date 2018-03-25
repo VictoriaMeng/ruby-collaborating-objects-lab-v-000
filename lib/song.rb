@@ -13,11 +13,11 @@ class Song
     file_array = file.split(%r{ - })
     file_array[-1].slice!(".mp3")
     song = Song.new(file_array[1])
-    artist = Song.artist_name(file_array[0])
+    artist = Artist.find_or_create_by_name(name)
   end
 
   def self.artist_name(name)
-    artist = Artist.find_or_create_by_name(name)
+    artist =
   end
 end
 
