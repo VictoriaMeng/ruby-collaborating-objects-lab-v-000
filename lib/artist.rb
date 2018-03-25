@@ -27,11 +27,12 @@ class Artist
     songs.each { |song| puts song.name }
   end
 
-  def self.find_or_create_by_name(name)
-    if @@all.none? { |artist| artist.name == name }
-      Artist.new(name)
+  def self.find_or_create_by_name(artist_name)
+    existing_artist = @@all.find { |artist| artist.name == _artist_name }
+    if existing_artist
+      existing_artist
     else
-      @@all.find { |artist| artist.name == name }
+      Artist.new(artist_name)
     end
   end
 end
