@@ -9,8 +9,12 @@ class MP3Importer
 
   def files
     files = []
-    Dir.foreach(path) do
-      |file| files << file if file.include?(".mp3")
+    Dir.foreach(path) do |file|
+      if file.include?(".mp3")
+        file_array = file.split(%r{ - })
+        file_array[-1].slice!(".mp3")
+        files << file_array
+      end
     end
     files
   end
