@@ -1,4 +1,5 @@
 require_relative 'artist.rb'
+require_relative 'mp3_importer.rb'
 require 'pry'
 
 class Song
