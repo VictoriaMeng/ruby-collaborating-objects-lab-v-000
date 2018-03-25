@@ -1,15 +1,16 @@
 require 'pry'
 
 class MP3Importer
-  attr_accessor :path, :file_names
+  attr_accessor :path
 
   def initialize(path)
     @path = path
-    @file_names = []
   end
 
   def files
-    Dir.foreach(path) { |file| file_names << file if file.include?(".mp3") }
+    files = []
+    Dir.foreach(path) { |file| files << file if file.include?(".mp3") }
+    files
   end
 
   def import
