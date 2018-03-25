@@ -14,10 +14,10 @@ class MP3Importer
   end
 
   def import
-    files.map! do |file|
+    files.each do |file|
       file_array = file.split(%r{ - })
       file_array[-1].slice!(".mp3")
-      file_array
+      artist = Artist.find_or_create_by_name(file_array[0])
     end
   end
 end
