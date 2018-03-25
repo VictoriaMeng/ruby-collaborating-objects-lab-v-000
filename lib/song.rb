@@ -17,6 +17,3 @@ class Song
     binding.pry
   end
 end
-
-
-song = Song.new_by_filename("Action Bronson - Larry Csonka - indie")
